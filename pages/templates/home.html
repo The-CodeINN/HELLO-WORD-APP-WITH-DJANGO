@@ -7,10 +7,12 @@
     <title>Django Tutorials</title>
   </head>
   <body>
-    {% extends 'base.html' %} 
     
-    {% block content %}
-    <h1>HomePage</h1>
-    {% endblock content %}
-  </body>
+    <h1>Message Board</h1>
+    <ul>
+      {% for post in all_posts_list %}
+      <li>{{ post.text }}</li>
+      {% endfor %}
+    </ul>
+    <body>
 </html>
